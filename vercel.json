@@ -1,0 +1,8 @@
+{
+  "name": "julien-portfolio",
+  "version": 2,
+  "public": true,
+  "github": {
+    "enabled": false
+  }
+}
