@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julien Kaykas-Wolff - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #fafaf9;
+            --color-text: #1c1917;
+            --color-text-muted: #57534e;
+            --color-accent: #0f766e;
+            --color-accent-light: #99f6e4;
+            --color-border: #e7e5e4;
+            --font-display: 'Newsreader', serif;
+            --font-body: 'Work Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 5rem;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 2rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            font-weight: 400;
+        }
+
+        /* Section */
+        section {
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--color-accent);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--color-accent-light);
+        }
+
+        /* Activity Cards */
+        .activity {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-left: 3px solid var(--color-accent-light);
+            border-radius: 0 4px 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .activity:hover {
+            border-left-color: var(--color-accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateX(4px);
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .activity-title {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .activity-duration {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+        .activity-role {
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-location {
+            font-style: italic;
+            color: var(--color-text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .activity-list li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            color: var(--color-text-muted);
+        }
+
+        .activity-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(153, 246, 228, 0.3) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .highlight-box p {
+            font-style: italic;
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .activity-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Julien Kaykas-Wolff</h1>
+            <p class="subtitle">High School Activities & Leadership Portfolio</p>
+        </header>
+
+        <section id="scouting">
+            <h2 class="section-title">Boy Scouts of America</h2>
+            
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">Life Scout</h3>
+                    <span class="activity-duration">4 years</span>
+                </div>
+                
+                <p class="activity-role">Leadership Positions: Scout Student Leader • Co-Leader • Treasurer</p>
+                
+                <ul class="activity-list">
+                    <li>Led multiple multi-day service and leadership expeditions across the United States</li>
+                    <li>Coordinated outdoor leadership initiatives in Florida Keys, Sierra Nevada Mountains, and Mount Diablo</li>
+                    <li>Managed troop finances and budgeting as Treasurer</li>
+                    <li>Developed team coordination and environmental stewardship skills through hands-on service projects</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="international">
+            <h2 class="section-title">International Service</h2>
+            
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">Global Leadership Adventures (GLA)</h3>
+                    <span class="activity-duration">1 week</span>
+                </div>
+                
+                <p class="activity-location">Costa Rica</p>
+                
+                <ul class="activity-list">
+                    <li>Constructed sea turtle hatchery to support endangered species conservation</li>
+                    <li>Assisted with cleanup and maintenance at local water treatment facility</li>
+                    <li>Led roadside cleanup and environmental restoration initiatives</li>
+                    <li>Developed cross-cultural collaboration and problem-solving skills in international setting</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>Service Progression: Local community → National expeditions → International conservation</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="community">
+            <h2 class="section-title">Community Service & Volunteering</h2>
+            
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">The Salvation Army</h3>
+                    <span class="activity-duration">4 years</span>
+                </div>
+                
+                <ul class="activity-list">
+                    <li>Ongoing volunteer supporting community aid initiatives and outreach programs</li>
+                    <li>Demonstrated consistent long-term commitment to local community support</li>
+                </ul>
+            </div>
+
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">Redwood Food Bank</h3>
+                    <span class="activity-duration">100+ hours</span>
+                </div>
+                
+                <p class="activity-location">Santa Rosa, CA</p>
+                
+                <ul class="activity-list">
+                    <li>Assisted with food distribution and warehouse operations</li>
+                    <li>Supported local families facing food insecurity</li>
+                </ul>
+            </div>
+
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">Thanksgiving Outreach</h3>
+                    <span class="activity-duration">~10 hours</span>
+                </div>
+                
+                <p class="activity-location">Tenderloin, San Francisco</p>
+                
+                <ul class="activity-list">
+                    <li>Distributed Thanksgiving meals to unhoused individuals in San Francisco's Tenderloin district</li>
+                    <li>Engaged directly with vulnerable community members during single-day service event</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="athletics">
+            <h2 class="section-title">Athletics</h2>
+            
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">Basketball (School Team)</h3>
+                    <span class="activity-duration">3 years</span>
+                </div>
+                
+                <p class="activity-role">Levels: Freshman & Junior Varsity</p>
+                
+                <ul class="activity-list">
+                    <li>Committed team member with consistent participation across multiple seasons</li>
+                    <li>Strong interest in continuing basketball at the intramural level in college</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="clubs">
+            <h2 class="section-title">Clubs & Extracurricular Involvement</h2>
+            
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">Pop Culture Club</h3>
+                    <span class="activity-duration">Ongoing</span>
+                </div>
+                
+                <ul class="activity-list">
+                    <li>Active member with regular meeting attendance</li>
+                    <li>Completed all assigned projects and group responsibilities</li>
+                </ul>
+            </div>
+
+            <div class="activity">
+                <div class="activity-header">
+                    <h3 class="activity-title">Student Leadership Initiative</h3>
+                    <span class="activity-duration">Senior Year</span>
+                </div>
+                
+                <ul class="activity-list">
+                    <li>Applied to create and lead a new club for senior year</li>
+                    <li>Demonstrated initiative and leadership without previously holding formal student government roles</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>Portfolio last updated January 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
