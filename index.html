@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Julien Kaykas-Wolff's high school portfolio showcasing leadership in Boy Scouts, international service in Costa Rica, community volunteering, athletics, and extracurricular activities.">
-    <meta name="keywords" content="Julien Kaykas-Wolff, high school portfolio, Boy Scouts, Life Scout, community service, leadership, college admissions">
+    <meta name="description" content="Julien Kaykas-Wolff's portfolio showcasing academic excellence, leadership in Boy Scouts, international conservation work in Costa Rica, and community service commitment. National Honor Society member and community advocate.">
+    <meta name="keywords" content="Julien Kaykas-Wolff, academic portfolio, National Honor Society, Boy Scouts leadership, community service, college admissions, St. Vincent de Paul">
     <meta name="author" content="Julien Kaykas-Wolff">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Julien Kaykas-Wolff - High School Portfolio">
-    <meta property="og:description" content="Leadership, service, and achievement portfolio for college admissions">
+    <meta property="og:title" content="Julien Kaykas-Wolff - Academic & Leadership Portfolio">
+    <meta property="og:description" content="Academic excellence, leadership, and service-driven impact for college admissions">
     <meta property="og:url" content="https://julien-portfolio-two.vercel.app">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Julien Kaykas-Wolff - High School Portfolio">
-    <meta name="twitter:description" content="Leadership, service, and achievement portfolio for college admissions">
+    <meta name="twitter:title" content="Julien Kaykas-Wolff - Academic & Leadership Portfolio">
+    <meta name="twitter:description" content="Academic excellence, leadership, and service-driven impact">
 
-    <title>Julien Kaykas-Wolff - High School Portfolio</title>
+    <title>Julien Kaykas-Wolff - Academic & Leadership Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,6 +92,16 @@
             font-size: 1.125rem;
             color: var(--color-text-muted);
             font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .mission-statement {
+            font-size: 1.25rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-top: 1.5rem;
+            font-style: italic;
+            line-height: 1.5;
         }
 
         /* Section */
@@ -105,7 +115,6 @@
         section:nth-child(3) { animation-delay: 0.2s; }
         section:nth-child(4) { animation-delay: 0.3s; }
         section:nth-child(5) { animation-delay: 0.4s; }
-        section:nth-child(6) { animation-delay: 0.5s; }
 
         .section-title {
             font-family: var(--font-display);
@@ -211,6 +220,33 @@
             font-weight: 500;
         }
 
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .metric-card {
+            background: var(--color-accent-light);
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            font-family: var(--font-display);
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-top: 0.25rem;
+        }
+
         /* Footer */
         footer {
             margin-top: 5rem;
@@ -262,6 +298,10 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Reduced motion for accessibility */
@@ -303,143 +343,246 @@
         <header role="banner">
             <h1>Julien Kaykas-Wolff</h1>
             <p class="subtitle">St. Vincent de Paul College Preparatory School • Petaluma, CA</p>
-            <p class="subtitle">Cumulative GPA: 3.8 • Class of 2027</p>
+            <p class="subtitle">National Honor Society • California Scholarship Federation • Class of 2027</p>
+            <p class="mission-statement">"Committed to building stronger communities through service, driven by a passion for learning and meaningful impact."</p>
         </header>
 
         <main id="main-content" role="main">
-            <section id="scouting" aria-labelledby="scouting-title">
-                <h2 id="scouting-title" class="section-title">Boy Scouts of America</h2>
+
+            <!-- ACADEMIC EXCELLENCE SECTION (35%) -->
+            <section id="academics" aria-labelledby="academics-title">
+                <h2 id="academics-title" class="section-title">Academic Excellence</h2>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Life Scout</h3>
-                        <span class="activity-duration">4 years</span>
+                        <h3 class="activity-title">Advanced Placement & Honors Coursework</h3>
+                        <span class="activity-duration">Current: All A's</span>
                     </div>
 
-                    <p class="activity-role">Leadership Positions: Scout Student Leader • Co-Leader • Treasurer</p>
+                    <p class="activity-role">Junior Year (Current): 4 AP Courses + Honors Chemistry</p>
 
                     <ul class="activity-list">
-                        <li>Led multiple multi-day service and leadership expeditions across the United States</li>
-                        <li>Coordinated outdoor leadership initiatives in Florida Keys, Sierra Nevada Mountains, and Mount Diablo</li>
-                        <li>Managed troop finances and budgeting as Treasurer</li>
-                        <li>Developed team coordination and environmental stewardship skills through hands-on service projects</li>
+                        <li>AP English Language and Culture - Developing advanced writing and analytical skills</li>
+                        <li>AP Spanish Language and Culture - Achieving bilingual fluency and cultural competency</li>
+                        <li>AP U.S. History - Exploring American political and social evolution</li>
+                        <li>AP Precalculus - Building advanced mathematical reasoning</li>
+                        <li>Honors Chemistry - Investigating scientific principles and laboratory techniques</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p><strong>Academic Foundation:</strong> Honors track since freshman year including Honors Algebra 2, Honors Geometry, Honors English courses, and Honors World History</p>
+                    </div>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Academic Achievements & Recognition</h3>
+                        <span class="activity-duration">3 Years</span>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li><strong>National Honor Society Member</strong> - Recognized for scholarship, leadership, service, and character</li>
+                        <li><strong>California Scholarship Federation</strong> - Academic excellence and community service honor society</li>
+                        <li><strong>Honor Roll</strong> - Three consecutive years of academic distinction</li>
+                    </ul>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Research & Independent Projects</h3>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li><strong>Costa Rica Service Research Paper (Morality Class)</strong> - Analyzed ethical dimensions of international conservation work and cross-cultural service learning</li>
+                        <li><strong>Learning Defense Presentation</strong> - Comprehensive reflection on two years of academic growth, challenges, and personal development (End of Sophomore Year)</li>
+                        <li><strong>Self-Directed Community Impact Research</strong> - Explored effective service models through hands-on experience in local, national, and international contexts</li>
+                    </ul>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Intellectual Interests & Future Vision</h3>
+                    </div>
+
+                    <p class="activity-role">Strongest Academic Areas: History, English, Mathematics</p>
+
+                    <ul class="activity-list">
+                        <li><strong>Passion for Writing & Historical Analysis</strong> - Deep interest in understanding how historical events shape modern society</li>
+                        <li><strong>College Academic Interests:</strong> Communications, Political Science, Psychology - exploring the intersection of human behavior, governance, and social change</li>
+                        <li><strong>Long-term Goal:</strong> Discover meaningful career path that combines communication skills, community impact, and leadership</li>
+                        <li><strong>Beyond Academics:</strong> Planning community college cooking class to develop practical life skills</li>
                     </ul>
                 </article>
             </section>
 
-            <section id="international" aria-labelledby="international-title">
-                <h2 id="international-title" class="section-title">International Service</h2>
+            <!-- LEADERSHIP IMPACT SECTION (35%) -->
+            <section id="leadership" aria-labelledby="leadership-title">
+                <h2 id="leadership-title" class="section-title">Leadership & Measurable Impact</h2>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Global Leadership Adventures (GLA)</h3>
+                        <h3 class="activity-title">Boy Scouts of America - Life Scout</h3>
+                        <span class="activity-duration">4 years</span>
+                    </div>
+
+                    <p class="activity-role">Leadership Progression: Scout Student Leader • Co-Leader • Treasurer</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-number">20</div>
+                            <div class="metric-label">Scouts Led at Marin Sierras</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">$1,500</div>
+                            <div class="metric-label">Monthly Budget Managed</div>
+                        </div>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li><strong>Lead Mentor, Marin Sierras Expedition</strong> - Guided group of 20 scouts (2-3 years younger) through weeklong leadership development camp teaching fundamental scouting values and outdoor skills</li>
+                        <li><strong>Troop Treasurer</strong> - Managed monthly budgets of $1,000-$1,500, coordinating event finances and developing fiscal responsibility</li>
+                        <li><strong>Multi-Day Expeditions</strong> - Led service and leadership trips across Florida Keys, Sierra Nevada Mountains, and Mount Diablo</li>
+                        <li><strong>Leadership Evolution</strong> - Progressed from participant to mentor, learning team coordination and environmental stewardship</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p><strong>Impact:</strong> Created rewarding learning experiences for younger scouts, with all participants reporting increased understanding of scouting mission and values</p>
+                    </div>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Global Leadership Adventures - Costa Rica</h3>
                         <span class="activity-duration">1 week</span>
                     </div>
 
-                    <p class="activity-location">Costa Rica</p>
+                    <p class="activity-location">International Conservation Team - Liberia, Costa Rica</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-number">~200</div>
+                            <div class="metric-label">Sea Turtle Eggs Protected</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">1,000 lbs</div>
+                            <div class="metric-label">Trash Removed (Single Day)</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">11</div>
+                            <div class="metric-label">International Team Members</div>
+                        </div>
+                    </div>
 
                     <ul class="activity-list">
-                        <li>Constructed sea turtle hatchery to support endangered species conservation</li>
-                        <li>Assisted with cleanup and maintenance at local water treatment facility</li>
-                        <li>Led roadside cleanup and environmental restoration initiatives</li>
-                        <li>Developed cross-cultural collaboration and problem-solving skills in international setting</li>
+                        <li><strong>Sea Turtle Conservation</strong> - Constructed 20 protected nesting sites, safeguarding approximately 200 endangered sea turtle eggs in first cycle</li>
+                        <li><strong>Environmental Cleanup</strong> - Removed 1,000 pounds of roadside garbage in single day near Liberia, improving community environment</li>
+                        <li><strong>Water Infrastructure Support</strong> - Assisted with maintenance at local water treatment facility serving surrounding communities</li>
+                        <li><strong>Cross-Cultural Leadership</strong> - Collaborated with 11-person North American team from New Jersey, Massachusetts, Washington, and Toronto</li>
+                        <li><strong>Sustainable Impact Focus</strong> - Developed understanding of long-term conservation strategies and community-centered environmental work</li>
                     </ul>
 
-                    <div class="highlight-box" role="note" aria-label="Service progression highlight">
-                        <p>Service Progression: Local community → National expeditions → International conservation</p>
+                    <div class="highlight-box">
+                        <p><strong>Leadership Growth Arc:</strong> From local helper → national coordinator → international conservation leader</p>
                     </div>
                 </article>
             </section>
 
-            <section id="community" aria-labelledby="community-title">
-                <h2 id="community-title" class="section-title">Community Service & Volunteering</h2>
+            <!-- SERVICE & CHARACTER SECTION (20%) -->
+            <section id="service" aria-labelledby="service-title">
+                <h2 id="service-title" class="section-title">Service & Community Impact</h2>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">The Salvation Army</h3>
-                        <span class="activity-duration">4 years</span>
+                        <h3 class="activity-title">Long-Term Community Commitment</h3>
+                        <span class="activity-duration">4+ years</span>
                     </div>
 
                     <ul class="activity-list">
-                        <li>Ongoing volunteer supporting community aid initiatives and outreach programs</li>
-                        <li>Demonstrated consistent long-term commitment to local community support</li>
+                        <li><strong>The Salvation Army (4 years ongoing)</strong> - Consistent volunteer distributing essential supplies including clothing, blankets, and food to community members in need</li>
+                        <li><strong>Redwood Food Bank (100+ hours)</strong> - Warehouse operations and food distribution supporting families facing food insecurity in Santa Rosa</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p><strong>Why Service Matters:</strong> "I enjoy helping my community and seeing the real impact my work has on people's lives. It's rewarding to know my time makes a difference."</p>
+                    </div>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Thanksgiving Outreach Initiative</h3>
+                        <span class="activity-duration">Annual</span>
+                    </div>
+
+                    <p class="activity-location">Tenderloin District, San Francisco</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-number">40</div>
+                            <div class="metric-label">Meals Prepared & Distributed</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">3</div>
+                            <div class="metric-label">Volunteer Team</div>
+                        </div>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li>Prepared and distributed 40 Thanksgiving meals to individuals in transition housing</li>
+                        <li>Direct engagement with San Francisco's most vulnerable communities</li>
+                        <li>Witnessed firsthand the challenges of urban poverty and importance of community support resources</li>
                     </ul>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Redwood Food Bank</h3>
-                        <span class="activity-duration">100+ hours</span>
+                        <h3 class="activity-title">Personal Mission</h3>
                     </div>
 
-                    <p class="activity-location">Santa Rosa, CA</p>
+                    <ul class="activity-list">
+                        <li><strong>Core Value:</strong> Building stronger communities through consistent, meaningful service</li>
+                        <li><strong>Problem to Solve:</strong> Affordable housing crisis - addressing one of society's most pressing challenges</li>
+                        <li><strong>Key Insight:</strong> Recognizing the depth of poverty in major U.S. cities has reinforced commitment to systemic change</li>
+                        <li><strong>Community Focus:</strong> All activities centered around building strong relationships and supporting others</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- PERSONAL NARRATIVE SECTION (10%) -->
+            <section id="personal" aria-labelledby="personal-title">
+                <h2 id="personal-title" class="section-title">Beyond Academics & Service</h2>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Character & Community</h3>
+                    </div>
 
                     <ul class="activity-list">
-                        <li>Assisted with food distribution and warehouse operations</li>
-                        <li>Supported local families facing food insecurity</li>
+                        <li><strong>Community-Oriented</strong> - All personal time revolves around the community of people I've built: friends, family, teammates</li>
+                        <li><strong>Family Values</strong> - Prioritizes time with siblings despite family living across the country, including sister in Germany (frequent visits)</li>
+                        <li><strong>Athletics</strong> - Point guard/shooting guard on school basketball team (3 years) - demonstrating teamwork and discipline</li>
+                        <li><strong>Pop Culture Club Member</strong> - Active participant in school community building (30+ members), creating school-wide engagement activities</li>
+                        <li><strong>Personal Interests</strong> - Fitness/gym workouts, pickup basketball with friends, online gaming community</li>
                     </ul>
+
+                    <div class="highlight-box">
+                        <p><strong>What Makes Me Unique:</strong> Hardworking, dedicated to service, sociable, and deeply committed to community and communication. I choose to spend my free time making a difference.</p>
+                    </div>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Thanksgiving Outreach</h3>
-                        <span class="activity-duration">~10 hours</span>
+                        <h3 class="activity-title">Looking Forward</h3>
                     </div>
 
-                    <p class="activity-location">Tenderloin, San Francisco</p>
-
                     <ul class="activity-list">
-                        <li>Distributed Thanksgiving meals to unhoused individuals in San Francisco's Tenderloin district</li>
-                        <li>Engaged directly with vulnerable community members during single-day service event</li>
+                        <li><strong>College Vision:</strong> Discover my career path while continuing to develop leadership and community impact skills</li>
+                        <li><strong>Career Aspiration:</strong> Leadership role that combines my communication strengths with meaningful community work</li>
+                        <li><strong>Long-term Impact:</strong> Build a career where I genuinely enjoy the work while making a lasting difference in people's lives</li>
+                        <li><strong>Immediate Next Step:</strong> Senior year work experience to develop professional skills and financial independence</li>
                     </ul>
                 </article>
             </section>
 
-            <section id="athletics" aria-labelledby="athletics-title">
-                <h2 id="athletics-title" class="section-title">Athletics</h2>
-
-                <article class="activity">
-                    <div class="activity-header">
-                        <h3 class="activity-title">Basketball (School Team)</h3>
-                        <span class="activity-duration">3 years</span>
-                    </div>
-
-                    <p class="activity-role">Levels: Freshman & Junior Varsity</p>
-
-                    <ul class="activity-list">
-                        <li>Committed team member with consistent participation across multiple seasons</li>
-                        <li>Strong interest in continuing basketball at the intramural level in college</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section id="clubs" aria-labelledby="clubs-title">
-                <h2 id="clubs-title" class="section-title">Clubs & Extracurricular Involvement</h2>
-
-                <article class="activity">
-                    <div class="activity-header">
-                        <h3 class="activity-title">Pop Culture Club</h3>
-                        <span class="activity-duration">Ongoing</span>
-                    </div>
-
-                    <ul class="activity-list">
-                        <li>Active member with regular meeting attendance</li>
-                        <li>Completed all assigned projects and group responsibilities</li>
-                    </ul>
-                </article>
-
-                <article class="activity">
-                    <div class="activity-header">
-                        <h3 class="activity-title">Student Leadership Initiative</h3>
-                        <span class="activity-duration">Senior Year</span>
-                    </div>
-
-                    <ul class="activity-list">
-                        <li>Applied to create and lead a new club for senior year</li>
-                        <li>Demonstrated initiative and leadership without previously holding formal student government roles</li>
-                    </ul>
-                </article>
-            </section>
         </main>
 
         <footer role="contentinfo">
