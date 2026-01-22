@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julien Kaykas-Wolff - Portfolio</title>
+    <meta name="description" content="Julien Kaykas-Wolff's high school portfolio showcasing leadership in Boy Scouts, international service in Costa Rica, community volunteering, athletics, and extracurricular activities.">
+    <meta name="keywords" content="Julien Kaykas-Wolff, high school portfolio, Boy Scouts, Life Scout, community service, leadership, college admissions">
+    <meta name="author" content="Julien Kaykas-Wolff">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Julien Kaykas-Wolff - High School Portfolio">
+    <meta property="og:description" content="Leadership, service, and achievement portfolio for college admissions">
+    <meta property="og:url" content="https://julien-portfolio.vercel.app">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Julien Kaykas-Wolff - High School Portfolio">
+    <meta name="twitter:description" content="Leadership, service, and achievement portfolio for college admissions">
+
+    <title>Julien Kaykas-Wolff - High School Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -37,6 +53,22 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 4rem 2rem;
+        }
+
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--color-accent);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
         }
 
         /* Header */
@@ -231,150 +263,186 @@
                 align-items: flex-start;
             }
         }
+
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .activity:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            header {
+                page-break-after: avoid;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <div class="container">
-        <header>
+        <header role="banner">
             <h1>Julien Kaykas-Wolff</h1>
-            <p class="subtitle">High School Activities & Leadership Portfolio</p>
+            <p class="subtitle">St. Vincent de Paul College Preparatory School • Petaluma, CA</p>
+            <p class="subtitle">Cumulative GPA: 3.8 • Class of 2026</p>
         </header>
 
-        <section id="scouting">
-            <h2 class="section-title">Boy Scouts of America</h2>
-            
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">Life Scout</h3>
-                    <span class="activity-duration">4 years</span>
-                </div>
-                
-                <p class="activity-role">Leadership Positions: Scout Student Leader • Co-Leader • Treasurer</p>
-                
-                <ul class="activity-list">
-                    <li>Led multiple multi-day service and leadership expeditions across the United States</li>
-                    <li>Coordinated outdoor leadership initiatives in Florida Keys, Sierra Nevada Mountains, and Mount Diablo</li>
-                    <li>Managed troop finances and budgeting as Treasurer</li>
-                    <li>Developed team coordination and environmental stewardship skills through hands-on service projects</li>
-                </ul>
-            </div>
-        </section>
+        <main id="main-content" role="main">
+            <section id="scouting" aria-labelledby="scouting-title">
+                <h2 id="scouting-title" class="section-title">Boy Scouts of America</h2>
 
-        <section id="international">
-            <h2 class="section-title">International Service</h2>
-            
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">Global Leadership Adventures (GLA)</h3>
-                    <span class="activity-duration">1 week</span>
-                </div>
-                
-                <p class="activity-location">Costa Rica</p>
-                
-                <ul class="activity-list">
-                    <li>Constructed sea turtle hatchery to support endangered species conservation</li>
-                    <li>Assisted with cleanup and maintenance at local water treatment facility</li>
-                    <li>Led roadside cleanup and environmental restoration initiatives</li>
-                    <li>Developed cross-cultural collaboration and problem-solving skills in international setting</li>
-                </ul>
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Life Scout</h3>
+                        <span class="activity-duration">4 years</span>
+                    </div>
 
-                <div class="highlight-box">
-                    <p>Service Progression: Local community → National expeditions → International conservation</p>
-                </div>
-            </div>
-        </section>
+                    <p class="activity-role">Leadership Positions: Scout Student Leader • Co-Leader • Treasurer</p>
 
-        <section id="community">
-            <h2 class="section-title">Community Service & Volunteering</h2>
-            
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">The Salvation Army</h3>
-                    <span class="activity-duration">4 years</span>
-                </div>
-                
-                <ul class="activity-list">
-                    <li>Ongoing volunteer supporting community aid initiatives and outreach programs</li>
-                    <li>Demonstrated consistent long-term commitment to local community support</li>
-                </ul>
-            </div>
+                    <ul class="activity-list">
+                        <li>Led multiple multi-day service and leadership expeditions across the United States</li>
+                        <li>Coordinated outdoor leadership initiatives in Florida Keys, Sierra Nevada Mountains, and Mount Diablo</li>
+                        <li>Managed troop finances and budgeting as Treasurer</li>
+                        <li>Developed team coordination and environmental stewardship skills through hands-on service projects</li>
+                    </ul>
+                </article>
+            </section>
 
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">Redwood Food Bank</h3>
-                    <span class="activity-duration">100+ hours</span>
-                </div>
-                
-                <p class="activity-location">Santa Rosa, CA</p>
-                
-                <ul class="activity-list">
-                    <li>Assisted with food distribution and warehouse operations</li>
-                    <li>Supported local families facing food insecurity</li>
-                </ul>
-            </div>
+            <section id="international" aria-labelledby="international-title">
+                <h2 id="international-title" class="section-title">International Service</h2>
 
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">Thanksgiving Outreach</h3>
-                    <span class="activity-duration">~10 hours</span>
-                </div>
-                
-                <p class="activity-location">Tenderloin, San Francisco</p>
-                
-                <ul class="activity-list">
-                    <li>Distributed Thanksgiving meals to unhoused individuals in San Francisco's Tenderloin district</li>
-                    <li>Engaged directly with vulnerable community members during single-day service event</li>
-                </ul>
-            </div>
-        </section>
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Global Leadership Adventures (GLA)</h3>
+                        <span class="activity-duration">1 week</span>
+                    </div>
 
-        <section id="athletics">
-            <h2 class="section-title">Athletics</h2>
-            
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">Basketball (School Team)</h3>
-                    <span class="activity-duration">3 years</span>
-                </div>
-                
-                <p class="activity-role">Levels: Freshman & Junior Varsity</p>
-                
-                <ul class="activity-list">
-                    <li>Committed team member with consistent participation across multiple seasons</li>
-                    <li>Strong interest in continuing basketball at the intramural level in college</li>
-                </ul>
-            </div>
-        </section>
+                    <p class="activity-location">Costa Rica</p>
 
-        <section id="clubs">
-            <h2 class="section-title">Clubs & Extracurricular Involvement</h2>
-            
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">Pop Culture Club</h3>
-                    <span class="activity-duration">Ongoing</span>
-                </div>
-                
-                <ul class="activity-list">
-                    <li>Active member with regular meeting attendance</li>
-                    <li>Completed all assigned projects and group responsibilities</li>
-                </ul>
-            </div>
+                    <ul class="activity-list">
+                        <li>Constructed sea turtle hatchery to support endangered species conservation</li>
+                        <li>Assisted with cleanup and maintenance at local water treatment facility</li>
+                        <li>Led roadside cleanup and environmental restoration initiatives</li>
+                        <li>Developed cross-cultural collaboration and problem-solving skills in international setting</li>
+                    </ul>
 
-            <div class="activity">
-                <div class="activity-header">
-                    <h3 class="activity-title">Student Leadership Initiative</h3>
-                    <span class="activity-duration">Senior Year</span>
-                </div>
-                
-                <ul class="activity-list">
-                    <li>Applied to create and lead a new club for senior year</li>
-                    <li>Demonstrated initiative and leadership without previously holding formal student government roles</li>
-                </ul>
-            </div>
-        </section>
+                    <div class="highlight-box" role="note" aria-label="Service progression highlight">
+                        <p>Service Progression: Local community → National expeditions → International conservation</p>
+                    </div>
+                </article>
+            </section>
 
-        <footer>
+            <section id="community" aria-labelledby="community-title">
+                <h2 id="community-title" class="section-title">Community Service & Volunteering</h2>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">The Salvation Army</h3>
+                        <span class="activity-duration">4 years</span>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li>Ongoing volunteer supporting community aid initiatives and outreach programs</li>
+                        <li>Demonstrated consistent long-term commitment to local community support</li>
+                    </ul>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Redwood Food Bank</h3>
+                        <span class="activity-duration">100+ hours</span>
+                    </div>
+
+                    <p class="activity-location">Santa Rosa, CA</p>
+
+                    <ul class="activity-list">
+                        <li>Assisted with food distribution and warehouse operations</li>
+                        <li>Supported local families facing food insecurity</li>
+                    </ul>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Thanksgiving Outreach</h3>
+                        <span class="activity-duration">~10 hours</span>
+                    </div>
+
+                    <p class="activity-location">Tenderloin, San Francisco</p>
+
+                    <ul class="activity-list">
+                        <li>Distributed Thanksgiving meals to unhoused individuals in San Francisco's Tenderloin district</li>
+                        <li>Engaged directly with vulnerable community members during single-day service event</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="athletics" aria-labelledby="athletics-title">
+                <h2 id="athletics-title" class="section-title">Athletics</h2>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Basketball (School Team)</h3>
+                        <span class="activity-duration">3 years</span>
+                    </div>
+
+                    <p class="activity-role">Levels: Freshman & Junior Varsity</p>
+
+                    <ul class="activity-list">
+                        <li>Committed team member with consistent participation across multiple seasons</li>
+                        <li>Strong interest in continuing basketball at the intramural level in college</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="clubs" aria-labelledby="clubs-title">
+                <h2 id="clubs-title" class="section-title">Clubs & Extracurricular Involvement</h2>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Pop Culture Club</h3>
+                        <span class="activity-duration">Ongoing</span>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li>Active member with regular meeting attendance</li>
+                        <li>Completed all assigned projects and group responsibilities</li>
+                    </ul>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">Student Leadership Initiative</h3>
+                        <span class="activity-duration">Senior Year</span>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li>Applied to create and lead a new club for senior year</li>
+                        <li>Demonstrated initiative and leadership without previously holding formal student government roles</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
             <p>Portfolio last updated January 2026</p>
         </footer>
     </div>
