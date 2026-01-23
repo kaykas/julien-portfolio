@@ -50,7 +50,7 @@
             padding: 4rem 2rem;
         }
 
-        /* Hero Section */
+        /* Hero Section - Enhanced */
         .hero {
             margin-bottom: 5rem;
             text-align: center;
@@ -102,10 +102,9 @@
 
         .carousel-slide img {
             width: 100%;
-            height: 600px;
-            object-fit: contain;
+            height: 500px;
+            object-fit: cover;
             display: block;
-            background: #f5f5f5;
         }
 
         .carousel-caption {
@@ -389,7 +388,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Hero Section -->
+        <!-- Enhanced Hero Section -->
         <header class="hero" role="banner">
             <h1 class="hero-title">Julien Kaykas-Wolff</h1>
             <p class="hero-tagline">I build communities one person at a time</p>
@@ -399,11 +398,52 @@
             </p>
         </header>
 
+        <!-- Photo Carousel -->
+        <div class="photo-carousel">
+            <div class="carousel-container" id="carouselContainer">
+                <div class="carousel-slide">
+                    <img src="photo1-sf-service.jpg" alt="Julien delivering donations in San Francisco Tenderloin District">
+                    <div class="carousel-caption">
+                        <strong>Service in Action</strong> - Thanksgiving outreach in SF's Tenderloin District. Not just talking about impact - creating it.
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="photo7-boy-scouts.jpg" alt="Julien with fellow scouts at outdoor leadership camp">
+                    <div class="carousel-caption">
+                        <strong>Leading Among Peers</strong> - Boy Scouts camp where I led 20 scouts through weeklong leadership training.
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="photo6-museum-sister.jpg" alt="Julien with sister at museum">
+                    <div class="carousel-caption">
+                        <strong>Family & Intellectual Curiosity</strong> - Museum visit with my sister. Family relationships matter most to me.
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="photo2-airport-friends.jpg" alt="Julien with friends at airport before travel">
+                    <div class="carousel-caption">
+                        <strong>Relationships Matter</strong> - Heading to Costa Rica for conservation work. I love talking to people - it's my favorite thing.
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="photo4-park.jpg" alt="Julien relaxing in urban park">
+                    <div class="carousel-caption">
+                        <strong>Quiet Confidence</strong> - I make a more quiet impact, doing stuff in the background to help everyone succeed.
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="moveSlide(-1)">← Previous</button>
+                <button class="carousel-btn" onclick="moveSlide(1)">Next →</button>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+
         <main role="main">
 
-            <!-- Who I Am Section -->
+            <!-- NEW: Who I Am Section (BEFORE Academics) -->
             <section id="who-i-am">
-                <h2 class="section-title">Who I am</h2>
+                <h2 class="section-title">Who I Am</h2>
 
                 <div class="story-quote">
                     "What you see on my transcript isn't really who I am. There's a lot more to me than just my intellect... there's more to me definitely on a more emotional level."
@@ -411,21 +451,23 @@
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">I love talking to people</h3>
+                        <h3 class="activity-title">I Love Talking to People</h3>
                     </div>
 
                     <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        It's my favorite thing. I want to make an impact on specific people. I'm not saying I have to change the world, but I hope to change a couple of people's perspectives on life or school or anything like that. I'm good at helping impact people's lives on a smaller level.
+                        It's my favorite thing. I want to make an impact on specific people - not saying I have to change the world, but I hope to change a couple of people's perspectives on life or school or anything like that. I feel like I'm a good person at helping impact people's lives on a smaller level.
                     </p>
 
-                    <p style="color: var(--color-text-muted);">
-                        I get to know people deeply through one-on-one conversations. My personal time is centered on friends, family, and teammates. I think lasting change happens through deep connections.
-                    </p>
+                    <ul class="activity-list">
+                        <li><strong>Relational Intelligence</strong> - I get to know people deeply through one-on-one conversations</li>
+                        <li><strong>Community-Centered</strong> - My personal time is centered on friends, family, and teammates</li>
+                        <li><strong>Creating Ripple Effects</strong> - I believe lasting change happens through deep connections, not grand gestures</li>
+                    </ul>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">How I show up for people</h3>
+                        <h3 class="activity-title">How I Show Up for People</h3>
                     </div>
 
                     <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
@@ -433,84 +475,47 @@
                     </p>
 
                     <div class="highlight-box">
-                        <p>I have a pretty strict moral code. It's really anything that would put me as well as the other person in the best position possible, and make sure that we both get something out of it. My kindness and my courage to stand up for people guide me.</p>
+                        <p><strong>Values that Guide Me:</strong> I have a pretty strict moral code - it's really anything that would put me as well as the other person in the best position possible, and make sure that we both get something out of it and don't just lose everything for no reason. My kindness and my courage to stand up for people guide me.</p>
                     </div>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Standing up when it matters</h3>
+                        <h3 class="activity-title">Standing Up When It Matters</h3>
                     </div>
 
                     <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        When my sister needed support coming out to our parents, I was there for her. Even though that's not a super popular thing to do, I thought it was the right thing to do. That's who I am: I show up for the people I care about, especially when it's uncomfortable or less popular.
+                        When my sister needed support coming out to our parents, I was there for her - even though that's not a super popular thing to do. I thought it was the right thing to do. That's who I am: I show up for the people I care about, especially when it's uncomfortable or less popular.
                     </p>
 
-                    <p style="color: var(--color-text-muted);">
-                        Doing the right thing even when it's harder or less popular. Prioritizing sibling relationships despite family living across the country and Germany. Being accountable for your actions and cleaning up your mess.
-                    </p>
+                    <ul class="activity-list">
+                        <li><strong>Moral Courage</strong> - Doing the right thing even when it's harder or less popular</li>
+                        <li><strong>Family First</strong> - Prioritizing sibling relationships despite family living across the country and Germany</li>
+                        <li><strong>Responsibility</strong> - Being accountable for your actions and cleaning up your mess</li>
+                    </ul>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">What drives my curiosity</h3>
+                        <h3 class="activity-title">What Drives My Curiosity</h3>
                     </div>
 
                     <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        I'll go down rabbit holes for hours and hours just to find out new information about stuff that I think is pretty cool. Recently, I've been fascinated by U.S. President's foreign policy decisions and our global relations (Greenland, Iran, Latin America). It's super interesting to me how historical events shape modern society.
+                        I'll go down rabbit holes for hours and hours just to find out new information about stuff that I think is pretty cool. Recently, I've been fascinated by U.S. President's foreign policy decisions and our global relations - Greenland, Iran, Latin America. It's super interesting to me how historical events shape modern society.
                     </p>
 
-                    <p style="color: var(--color-text-muted);">
-                        I love learning even when there's no grade attached. History is easily the most entertaining thing that humans have ever done. When something interests me, I'll research it for hours without stopping.
-                    </p>
+                    <ul class="activity-list">
+                        <li><strong>Genuine Intellectual Curiosity</strong> - I love learning even when there's no grade attached</li>
+                        <li><strong>History Passion</strong> - Easily the most entertaining thing that humans have ever done</li>
+                        <li><strong>Deep Dives</strong> - When something interests me, I'll research it for hours without stopping</li>
+                    </ul>
                 </article>
 
             </section>
 
-            <!-- Photo Carousel -->
-            <div class="photo-carousel">
-                <div class="carousel-container" id="carouselContainer">
-                    <div class="carousel-slide">
-                        <img src="photo1-sf-service.jpg" alt="Julien delivering donations in San Francisco Tenderloin District">
-                        <div class="carousel-caption">
-                            <strong>Service in action</strong> – Thanksgiving outreach in SF's Tenderloin District.
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="photo7-boy-scouts.jpg" alt="Julien with fellow scouts at outdoor leadership camp">
-                        <div class="carousel-caption">
-                            <strong>Leading among peers</strong> – Boy Scouts camp where I led 20 scouts through weeklong leadership training.
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="photo6-museum-sister.jpg" alt="Julien with sister at museum">
-                        <div class="carousel-caption">
-                            <strong>Family matters</strong> – Museum visit with my sister.
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="photo2-airport-friends.jpg" alt="Julien with friends at airport before travel">
-                        <div class="carousel-caption">
-                            <strong>With friends</strong> – Heading to Costa Rica for conservation work. I love talking to people.
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="photo4-park.jpg" alt="Julien relaxing in urban park">
-                        <div class="carousel-caption">
-                            <strong>How I work</strong> – I make a quiet impact, doing stuff in the background to help everyone succeed.
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button class="carousel-btn" onclick="moveSlide(-1)">← Previous</button>
-                    <button class="carousel-btn" onclick="moveSlide(1)">Next →</button>
-                </div>
-                <div class="carousel-dots" id="carouselDots"></div>
-            </div>
-
-            <!-- How I Lead -->
+            <!-- How I Lead (Reframed Leadership) -->
             <section id="leadership">
-                <h2 class="section-title">How I lead</h2>
+                <h2 class="section-title">How I Lead</h2>
 
                 <div class="story-quote">
                     "I lead by empowering others to shine. I make a quiet impact by making sure everyone's in the best position to succeed."
@@ -518,74 +523,74 @@
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Boy Scouts of America – Life Scout</h3>
+                        <h3 class="activity-title">Boy Scouts of America - Life Scout</h3>
                         <span class="activity-duration">4 years</span>
                     </div>
 
-                    <p class="activity-role">Student → Co-Leader → Treasurer → Mentor</p>
+                    <p class="activity-role">Leadership Progression: Student → Co-Leader → Treasurer → Mentor</p>
 
                     <div class="metrics-grid">
                         <div class="metric-card">
                             <div class="metric-number">20</div>
-                            <div class="metric-label">Scouts mentored</div>
+                            <div class="metric-label">Scouts Mentored</div>
                         </div>
                         <div class="metric-card">
                             <div class="metric-number">$1,500</div>
-                            <div class="metric-label">Monthly budget managed</div>
+                            <div class="metric-label">Monthly Budget Managed</div>
                         </div>
                     </div>
 
                     <ul class="activity-list">
-                        <li>As Troop Treasurer, managed $1,000-$1,500 monthly budgets so everyone could focus on learning</li>
-                        <li>Led 20 scouts (2-3 years younger) at Marin Sierras by teaching, not directing</li>
-                        <li>Set up systems so teammates could excel</li>
-                        <li>Multi-day expeditions across Florida Keys, Sierra Nevada, Mount Diablo</li>
+                        <li><strong>Behind-the-Scenes Leadership</strong> - As Troop Treasurer, managed $1,000-$1,500 monthly budgets so everyone could focus on learning</li>
+                        <li><strong>Mentorship Over Command</strong> - Led 20 scouts (2-3 years younger) at Marin Sierras by teaching, not directing</li>
+                        <li><strong>Enabling Others' Success</strong> - Set up systems and processes so teammates could excel</li>
+                        <li><strong>Leading by Example</strong> - Multi-day expeditions across Florida Keys, Sierra Nevada, Mount Diablo</li>
                     </ul>
 
                     <div class="highlight-box">
-                        <p>All 20 participants reported better understanding of scouting mission through hands-on mentorship, not top-down instruction.</p>
+                        <p><strong>Impact:</strong> All 20 participants reported increased understanding of scouting mission through hands-on mentorship, not top-down instruction</p>
                     </div>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
                         <h3 class="activity-title">Costa Rica Conservation Team</h3>
-                        <span class="activity-duration">1 week</span>
+                        <span class="activity-duration">1 week intensive</span>
                     </div>
 
-                    <p class="activity-location">Global Leadership Adventures – Liberia, Costa Rica</p>
+                    <p class="activity-location">Global Leadership Adventures - Liberia, Costa Rica</p>
 
                     <div class="metrics-grid">
                         <div class="metric-card">
                             <div class="metric-number">~200</div>
-                            <div class="metric-label">Sea turtle eggs protected</div>
+                            <div class="metric-label">Sea Turtle Eggs Protected</div>
                         </div>
                         <div class="metric-card">
                             <div class="metric-number">1,000 lbs</div>
-                            <div class="metric-label">Trash removed (single day)</div>
+                            <div class="metric-label">Trash Removed (Single Day)</div>
                         </div>
                         <div class="metric-card">
                             <div class="metric-number">11</div>
-                            <div class="metric-label">Team members</div>
+                            <div class="metric-label">Team Members</div>
                         </div>
                     </div>
 
                     <ul class="activity-list">
-                        <li>Constructed 20 nesting sites protecting ~200 endangered sea turtle eggs</li>
-                        <li>Removed 1,000 pounds of roadside trash near Liberia in single day</li>
-                        <li>Assisted local water treatment facility serving surrounding communities</li>
-                        <li>Collaborated with 11-person team from four regions</li>
+                        <li><strong>Collaborative Conservation</strong> - Constructed 20 nesting sites protecting ~200 endangered sea turtle eggs</li>
+                        <li><strong>Environmental Action</strong> - Removed 1,000 pounds of roadside trash near Liberia in single day</li>
+                        <li><strong>Infrastructure Support</strong> - Assisted local water treatment facility serving surrounding communities</li>
+                        <li><strong>Cross-Cultural Teamwork</strong> - Collaborated with 11-person team from four regions</li>
                     </ul>
 
                     <div class="highlight-box">
-                        <p>From local helper to national coordinator to international conservation.</p>
+                        <p><strong>Growth Arc:</strong> From local helper → national coordinator → international conservation leader</p>
                     </div>
                 </article>
             </section>
 
-            <!-- Academics -->
+            <!-- Academic Excellence -->
             <section id="academics">
-                <h2 class="section-title">What you can see on my transcript</h2>
+                <h2 class="section-title">What You Can See on My Transcript</h2>
 
                 <article class="activity">
                     <div class="activity-header">
@@ -593,74 +598,73 @@
                         <span class="activity-duration">Current: All A's</span>
                     </div>
 
-                    <p class="activity-role">Junior Year: 4 AP Courses + Honors Chemistry</p>
+                    <p class="activity-role">Junior Year (Current): 4 AP Courses + Honors Chemistry</p>
 
                     <ul class="activity-list">
-                        <li>AP English Language and Culture</li>
-                        <li>AP Spanish Language and Culture</li>
-                        <li>AP U.S. History</li>
-                        <li>AP Precalculus</li>
-                        <li>Honors Chemistry</li>
+                        <li>AP English Language and Culture - Advanced writing, rhetoric, and critical analysis</li>
+                        <li>AP Spanish Language and Culture - Bilingual fluency with cultural competency</li>
+                        <li>AP U.S. History - American political and social evolution</li>
+                        <li>AP Precalculus - Advanced mathematical reasoning and problem-solving</li>
+                        <li>Honors Chemistry - Scientific principles and laboratory techniques</li>
                     </ul>
 
                     <div class="highlight-box">
-                        <p>Honors track since freshman year: Algebra 2, Geometry, English, World History</p>
+                        <p><strong>Academic Foundation:</strong> Honors track since freshman year - Algebra 2, Geometry, English, World History</p>
                     </div>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Academic recognition</h3>
-                        <span class="activity-duration">3 years</span>
+                        <h3 class="activity-title">Academic Recognition</h3>
+                        <span class="activity-duration">3 Years</span>
                     </div>
 
                     <ul class="activity-list">
-                        <li>National Honor Society</li>
-                        <li>California Scholarship Federation</li>
-                        <li>Honor Roll (three consecutive years)</li>
+                        <li><strong>National Honor Society</strong> - Scholarship, leadership, service, and character</li>
+                        <li><strong>California Scholarship Federation</strong> - Academic excellence and community service</li>
+                        <li><strong>Honor Roll</strong> - Three consecutive years of academic distinction</li>
                     </ul>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">What I'm exploring in college</h3>
+                        <h3 class="activity-title">What I'm Exploring in College</h3>
                     </div>
 
                     <p class="activity-role">Communications • Political Science • Psychology</p>
 
-                    <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        I'm interested in how people communicate, make decisions, and build communities. Historical patterns and modern governance fascinate me. Long-term, I want a career combining communication strengths with community impact.
-                    </p>
-
-                    <p style="color: var(--color-text-muted);">
-                        I'm planning to take a community college cooking class for life skills.
-                    </p>
+                    <ul class="activity-list">
+                        <li><strong>Understanding Human Connection</strong> - How people communicate, make decisions, and build communities</li>
+                        <li><strong>Social Change Mechanisms</strong> - Historical patterns and modern governance</li>
+                        <li><strong>Long-term Vision</strong> - Career combining communication strengths with meaningful community impact</li>
+                        <li><strong>Practical Skills</strong> - Planning community college cooking class for life skills</li>
+                    </ul>
                 </article>
             </section>
 
-            <!-- Service -->
+            <!-- Service & Community -->
             <section id="service">
-                <h2 class="section-title">Building community through service</h2>
+                <h2 class="section-title">Building Community Through Service</h2>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Long-term commitment</h3>
-                        <span class="activity-duration">4+ years</span>
+                        <h3 class="activity-title">Long-Term Commitment</h3>
+                        <span class="activity-duration">4+ years ongoing</span>
                     </div>
 
                     <ul class="activity-list">
-                        <li>The Salvation Army (4 years) – Distributing essential supplies to community members in need</li>
-                        <li>Redwood Food Bank (100+ hours) – Warehouse operations supporting families facing food insecurity</li>
+                        <li><strong>The Salvation Army (4 years)</strong> - Consistent presence distributing essential supplies to community members in need</li>
+                        <li><strong>Redwood Food Bank (100+ hours)</strong> - Warehouse operations supporting families facing food insecurity</li>
                     </ul>
 
                     <div class="highlight-box">
-                        <p>"I enjoy helping my community and seeing the real impact my work has on people's lives. It's rewarding to know my time makes a difference."</p>
+                        <p><strong>Why This Matters:</strong> "I enjoy helping my community and seeing the real impact my work has on people's lives. It's rewarding to know my time makes a difference."</p>
                     </div>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">Thanksgiving outreach</h3>
+                        <h3 class="activity-title">Thanksgiving Outreach</h3>
                         <span class="activity-duration">Annual tradition</span>
                     </div>
 
@@ -669,11 +673,11 @@
                     <div class="metrics-grid">
                         <div class="metric-card">
                             <div class="metric-number">40</div>
-                            <div class="metric-label">Meals prepared & distributed</div>
+                            <div class="metric-label">Meals Prepared & Distributed</div>
                         </div>
                         <div class="metric-card">
                             <div class="metric-number">3</div>
-                            <div class="metric-label">Volunteer team</div>
+                            <div class="metric-label">Volunteer Team</div>
                         </div>
                     </div>
 
@@ -686,65 +690,70 @@
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">What I'm working toward</h3>
+                        <h3 class="activity-title">What I'm Working Toward</h3>
                     </div>
 
-                    <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        The affordable housing crisis is one of society's biggest challenges. I want to contribute by building relationships and supporting systemic change.
-                    </p>
-
-                    <p style="color: var(--color-text-muted);">
-                        I want a small, intimate college environment where I can have one-on-one conversations with professors. What excites me is being part of a community with people from all over the world who are there to learn and pursue being better people.
-                    </p>
+                    <ul class="activity-list">
+                        <li><strong>Problem to Solve:</strong> Affordable housing crisis - one of society's most pressing challenges</li>
+                        <li><strong>How I'll Contribute:</strong> Building relationships and supporting systemic change</li>
+                        <li><strong>College Vision:</strong> Small, intimate environment where I can have one-on-one conversations with professors</li>
+                        <li><strong>What Excites Me:</strong> Being part of a community with people from all over the world who are there to learn and pursue being better people</li>
+                    </ul>
                 </article>
             </section>
 
             <!-- Personal Growth -->
             <section id="personal">
-                <h2 class="section-title">Growth & what's next</h2>
+                <h2 class="section-title">Growth & What's Next</h2>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">The challenge that shaped me most</h3>
+                        <h3 class="activity-title">The Challenge That Shaped Me Most</h3>
                     </div>
 
                     <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        COVID hit me hard. I got extremely obese and wasn't confident in myself. For the past couple of years, I've been really working hard. I've been going to the gym, playing basketball, been really active just so I can lose that weight and return to the confident self I was before. That experience really taught me that you can let yourself go way quicker than you thought. But I'm coming back better than I was before.
+                        COVID hit me hard - I got extremely obese and wasn't confident in myself. For the past couple of years, I've been really working hard. I've been going to the gym, playing basketball, been really active just so I can lose that weight and return to the confident self I was before. That experience really taught me that you can let yourself go way quicker than you thought. But I'm coming back better than I was before.
                     </p>
-
-                    <p style="color: var(--color-text-muted);">
-                        Building back from setbacks takes consistent effort. I'm learning what I need to work on (confidence, independence). I thrive in competitive environments where I can push myself. I'm trying to learn from mistakes and stay out of bad cycles.
-                    </p>
-                </article>
-
-                <article class="activity">
-                    <div class="activity-header">
-                        <h3 class="activity-title">Beyond academics & service</h3>
-                    </div>
 
                     <ul class="activity-list">
-                        <li>Point guard/shooting guard on school basketball team (3 years)</li>
-                        <li>Pop Culture Club member (30+ members)</li>
-                        <li>Fitness training, pickup basketball, online gaming community</li>
-                        <li>Prioritizing sibling relationships despite distance</li>
+                        <li><strong>Resilience</strong> - Building back from setbacks with consistent effort</li>
+                        <li><strong>Self-Awareness</strong> - Understanding what I need to work on (confidence, independence)</li>
+                        <li><strong>Competition Drives Me</strong> - I thrive in environments where I can push myself</li>
+                        <li><strong>Growth Mindset</strong> - Learning from mistakes and staying out of bad cycles</li>
                     </ul>
                 </article>
 
                 <article class="activity">
                     <div class="activity-header">
-                        <h3 class="activity-title">What college means to me</h3>
+                        <h3 class="activity-title">Beyond Academics & Service</h3>
+                    </div>
+
+                    <ul class="activity-list">
+                        <li><strong>Athletics</strong> - Point guard/shooting guard on school basketball team (3 years)</li>
+                        <li><strong>Pop Culture Club</strong> - Active member creating school-wide activities (30+ members)</li>
+                        <li><strong>What I Enjoy</strong> - Fitness training, pickup basketball, online gaming community</li>
+                        <li><strong>Family Values</strong> - Prioritizing sibling relationships despite distance</li>
+                    </ul>
+                </article>
+
+                <article class="activity">
+                    <div class="activity-header">
+                        <h3 class="activity-title">What College Means to Me</h3>
                     </div>
 
                     <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        I'm hoping college helps me become more independent. I will say I rely on people too much for stuff, so hopefully that'll help me in these transition years. I want to leave with specific skills (obviously being more skilled in my field, but also being a better cook, better at basic home chores, just grown as a person mentally and physically).
+                        I'm hoping college helps me become a more independent person. I will say I rely on people too much for stuff, so hopefully that'll help me in these transition years. I want to leave with specific skills - obviously being more skilled in my field, but also being a better cook, better at basic home chores, just grown as a person mentally and physically.
                     </p>
 
-                    <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        Building independence while maintaining collaborative strengths. Learning from mistakes, breaking bad cycles, becoming a better version of myself. Having a good group of friends and building that net of people around me.
-                    </p>
+                    <ul class="activity-list">
+                        <li><strong>Development Focus:</strong> Building independence while maintaining collaborative strengths</li>
+                        <li><strong>Skills I Want:</strong> Professional expertise + practical life skills (cooking, self-management)</li>
+                        <li><strong>Growth Goals:</strong> Learn from mistakes, break bad cycles, become a better version of myself</li>
+                        <li><strong>What Matters Most:</strong> Having a good group of friends and building that net of people around me</li>
+                    </ul>
 
                     <div class="highlight-box">
-                        <p>"That first chance is really the only thing I need. After that first chance, there's gonna be no reason they wouldn't want to have me there. There's so many special, unique things about me: my intellect, my emotional intelligence, my communication skills, my independent work, and my personality."</p>
+                        <p><strong>Why Bet on Me:</strong> "That first chance is really the only thing I need. After that first chance, there's gonna be no reason they wouldn't want to have me there. There's so many special, unique things about me - my intellect, my emotional intelligence, my communication skills, my independent work, and my personality."</p>
                     </div>
                 </article>
             </section>
@@ -753,6 +762,7 @@
 
         <footer role="contentinfo">
             <p>Portfolio last updated January 2026</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Built with LLM Council strategic guidance</p>
         </footer>
     </div>
 
@@ -800,4 +810,3 @@
     </script>
 </body>
 </html>
-<!-- Test auto-deploy 1769143199 -->
