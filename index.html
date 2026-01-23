@@ -78,8 +78,42 @@
             font-size: 1.125rem;
             color: var(--color-text-muted);
             max-width: 700px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1rem;
             line-height: 1.7;
+        }
+
+        .hero-contact {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin-top: 1rem;
+        }
+
+        .hero-contact a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .hero-contact a:hover {
+            color: var(--color-text);
+        }
+
+        .pdf-download {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .pdf-download:hover {
+            background: var(--color-text);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         /* Photo Carousel */
@@ -385,6 +419,197 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        /* Print Styles for PDF Export */
+        @media print {
+            body {
+                background: white;
+                color: #1c1917;
+                font-size: 10.5pt;
+                line-height: 1.6;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0.6in 0.6in;
+            }
+
+            /* Hide download button in print */
+            .pdf-download {
+                display: none !important;
+            }
+
+            .hero {
+                margin-bottom: 1.5rem;
+                page-break-after: avoid;
+                border-bottom: 2px solid #0f766e;
+                padding-bottom: 1rem;
+            }
+
+            .hero-title {
+                font-size: 24pt;
+                color: #1c1917;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 13pt;
+                color: #0f766e;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 9.5pt;
+                color: #57534e;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-contact {
+                font-size: 9.5pt;
+                color: #57534e;
+            }
+
+            .hero-contact a {
+                color: #0f766e;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            /* Hide carousel completely for print */
+            .photo-carousel {
+                display: none !important;
+            }
+
+            .carousel-btn, .carousel-controls, .carousel-dots {
+                display: none !important;
+            }
+
+            section {
+                page-break-inside: avoid;
+                margin-bottom: 1.75rem;
+            }
+
+            .section-title {
+                color: #0f766e;
+                font-size: 13pt;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                page-break-after: avoid;
+                border-bottom: 1px solid #e7e5e4;
+                padding-bottom: 0.4rem;
+            }
+
+            .section-title::after {
+                display: none;
+            }
+
+            .activity {
+                page-break-inside: avoid;
+                margin-bottom: 1.25rem;
+                padding: 0.75rem;
+                background: white;
+                border-left: 3px solid #0f766e;
+                border-radius: 0;
+            }
+
+            .activity:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .activity-header {
+                margin-bottom: 0.5rem;
+            }
+
+            .activity-title {
+                font-size: 11.5pt;
+                color: #1c1917;
+                font-weight: 600;
+                page-break-after: avoid;
+            }
+
+            .activity-role {
+                color: #0f766e;
+                font-weight: 600;
+                font-size: 10pt;
+            }
+
+            .activity-duration {
+                font-size: 9pt;
+                color: #57534e;
+            }
+
+            .activity-location {
+                font-size: 9pt;
+                color: #57534e;
+                font-style: italic;
+            }
+
+            .activity-list li {
+                font-size: 10pt;
+                color: #57534e;
+                margin-bottom: 0.3rem;
+            }
+
+            .activity-list li::before {
+                color: #0f766e;
+            }
+
+            .highlight-box {
+                page-break-inside: avoid;
+                padding: 0.75rem;
+                background: #f0fdfa !important;
+                border-left: 4px solid #0f766e;
+                border-radius: 4px;
+                margin-top: 0.75rem;
+            }
+
+            .highlight-box p {
+                color: #1c1917;
+                font-style: italic;
+                font-size: 10pt;
+            }
+
+            .story-quote {
+                page-break-inside: avoid;
+                padding: 0.75rem;
+                background: #f0fdfa !important;
+                border-left: 4px solid #0f766e;
+                color: #1c1917;
+                font-size: 10.5pt;
+            }
+
+            .metric-card {
+                background: #f0fdfa !important;
+                border: 1px solid #0f766e;
+            }
+
+            .metric-number {
+                color: #0f766e;
+            }
+
+            /* Ensure links don't show URL in PDF */
+            a[href]:after {
+                content: "";
+            }
+
+            footer {
+                margin-top: 1.5rem;
+                padding-top: 1rem;
+                border-top: 1px solid #e7e5e4;
+                font-size: 8.5pt;
+                color: #57534e;
+                text-align: center;
+            }
+
+            /* Remove animations and transitions for print */
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+                box-shadow: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -397,6 +622,10 @@
                 St. Vincent de Paul College Preparatory • Petaluma, CA<br>
                 National Honor Society • Class of 2027
             </p>
+            <p class="hero-contact">
+                <a href="mailto:julien@kaykas.com">julien@kaykas.com</a> • <a href="tel:+14152189086">415-218-9086</a>
+            </p>
+            <a href="Julien-Kaykas-Wolff-Portfolio.pdf" class="pdf-download" download>📄 Download Portfolio PDF</a>
         </header>
 
         <main role="main">
@@ -404,10 +633,6 @@
             <!-- Who I Am Section -->
             <section id="who-i-am">
                 <h2 class="section-title">Who I am</h2>
-
-                <div class="story-quote">
-                    "What you see on my transcript isn't really who I am. There's a lot more to me than just my intellect... there's more to me definitely on a more emotional level."
-                </div>
 
                 <article class="activity">
                     <div class="activity-header">
